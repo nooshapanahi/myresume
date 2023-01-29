@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Noosha Panahi's Resume</title>
+        <meta name="description" content="Noosha Panahi's Interactive Resume" />
+        <meta author="Noosha Panahi" />
+        <meta name="keywords" content="Noosha Panahi,cv,resume,curriculum vitae" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <!--OpenGraph-->
+        <meta property="og:title" content="Noosha Panahi's Resume" />
+        <meta property="og:description" content="Noosha Panahi's Interactive Resume" />
+        <meta property="og:type" content="document" />
+        <!--<meta property="og:url" content="[link to your site" />-->
+        <script src="https://kit.fontawesome.com/6b4f25ac53.js" crossorigin="anonymous"></script>
+        <style>
+            @media print {
+                @page{
+                    size:A4;
+                }
+
+            }
+            @media only screen and (max-width:769px){
+                .maingrid{
+                    display:grid;
+                    grid-template-columns:1fr 1fr;
+                }
+               
+            }
+            @media only screen and (max-width:480px){
+                .maingrid{
+                    display:grid;
+                    grid-template-columns:1fr;
+                }
+
+            }
+            
+           *{
+            box-sizing: border-box;
+           }
+           body{
+                color:white;
+                padding:0;
+                margin:0;
+                background: url(programmer.jpg) rgba(0,0,0,0.3) no-repeat fixed center;
+                background-blend-mode: multiply;
+                font-family: Helvetica;
+            }
+            header{
+                background-color:rgba(0,0,0,0.5);
+                position:fixed;
+                top:0;
+                width:100%;
+                text-align:center;
+                padding-top:20px;
+                padding-bottom:20px;
+            }
+            h1{
+                font-size:34px;
+                font-weight:bold;
+            }
+            .maingrid{
+                margin:300px auto 0px auto;
+                max-width:800px;
+                display:grid;
+                grid-template-columns: repeat(4,1fr);
+            }
+            input{
+                display:none;
+            }
+            h2{
+                border:1px solid white;
+                text-align:center;
+                padding-top:20px;
+                padding-bottom:20px;
+                font-size:24px;
+                font-weight:bold;
+                transition:background-color 1s,color 1s;
+            }
+            #name{
+                font-size:22px;
+                font-weight:bold;
+            }
+            #jobtitle{
+                font-size:16px;
+                color:rgb(224, 224, 224);
+            }
+            #nj{
+                line-height:10px;
+            }
+
+            #intro h2{
+                border-radius:8px 0 0 8px;
+            }
+            #skill h2{
+                border-radius:0 8px 8px 0;
+            }
+            section{
+                position:relative;
+            }
+            section > div {
+                display:none;
+            }
+            ul{
+                padding:0px;
+                margin:0px;
+            }
+            .des{
+                padding:20px 40px;
+                background-color:rgba(0,0,0,0.6);
+                color:white;
+                font-size:18px;
+                line-height:32px;
+                font-weight:500;
+                border-radius: 8px;
+                font-family:"Helvetica Neue", serif;
+            }
+            
+            #radio-intro:checked ~ #intro > div{
+                width:800px;
+                display:block;
+                position:absolute;
+            }
+            #radio-intro:checked ~ #intro > h2{
+                background-color:white;
+                color:black;
+            }
+            #radio-exp:checked ~ #exp > div{
+                transform:translateX(-200px);
+                width:800px;
+                display:block;
+                position:absolute;
+            } 
+            #radio-exp:checked ~ #exp > h2{
+                background-color:white;
+                color:black;
+            } 
+            #radio-edu:checked ~ #edu > div{
+                transform:translateX(-400px);
+                width:800px;
+                display:block;
+                position:absolute;
+            }
+            #radio-edu:checked ~ #edu > h2{
+                background-color:white;
+                color:black;
+            }
+            #radio-skill:checked ~ #skill > div{
+                transform:translateX(-600px);
+                width:800px;
+                display:block;
+                position:absolute;
+            }
+            #radio-skill:checked ~ #skill > h2{
+                background-color:white;
+                color:black;
+            }
+            .date{
+                font-size:16px;
+                
+            }
+            .experience{
+                line-height:12px;
+            }
+            .experience:nth-child(2){
+                margin-top:35px;
+            }
+            .experience:nth-child(3){
+                margin-top:35px;
+            }
+            footer{
+                background-color:rgba(0,0,0,0.5);
+                position:fixed;
+                bottom:0;
+                width:100%;
+                padding-top:20px;
+                padding-bottom:20px;
+            }
+            address{
+                display:flex;
+                flex-direction:row;
+                justify-content:center;
+                column-gap:30px;
+            }
+            footer i{
+                font-size:16px;
+                color:white;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!--header-->
+        <header>
+            <h1>Noosha Panahi's Resume</h1>
+        </header>
+        <main itemscope itemtype="https://schema.org/Person">
+        <div class="maingrid">
+        <input id="radio-intro" type="radio" name="section" />
+        <input id="radio-exp" type="radio" name="section" />
+        <input id="radio-edu" type="radio" name="section" />
+        <input id="radio-skill" type="radio" name="section" />
+        <!--introduction section-->
+        <section id="intro" >
+            <h2><label for="radio-intro">Introduction</label></h2>
+            <div class="des">
+                <div id="nj">
+                <p id="name" itemprop="name">Noosha Panahi</p>
+                <p id="jobtitle" itemprop="jobTitle">Wordpress web designer</p>
+                </div>
+                <p itemprop="description">Versatile web designer due to extensive history in graphic and web design. Dedicated to continuously learning about new web design trends and concepts to becoming a valuable member of the team. Detail-oriented and knowledgeable in various programming languages with 3 years of experience and completed several courses.</p>
+            </div>
+        </section>
+
+        <!--experience section-->
+        <section id="exp" >
+            <h2><label for="radio-exp">Experience</label></h2>
+            <div class="des">
+                <div class="experience">
+                <p>Mollasadra international holding Co. - WordPress web designer</p>
+                <p class="date"><time datetime="2022">2022</time> - <time datetime="2023">Current</time></p>
+                </div>
+                <div class="experience">
+                <p>IT mehr digital marketing agency - WordPress web designer</p>
+                <p class="date"><time datetime="2021">2021</time> - <time datetime="2022">2022</time></p>
+                </div>
+                <div class="experience">
+                <p>World of change digital marketing agency - WordPress web designer</p>
+                <p class="date"><time datetime="2020">2020</time> - <time datetime="2021">2021</time></p>
+                </div>
+            </div>
+        </section>
+
+        <!--certifications section-->
+        <section id="edu" >
+            <h2><label for="radio-edu">Certifications</label></h2>
+            <div class="des">
+                <ul>
+                    <li>Introduction to Front-End Development by Meta - coursera</li>
+                    <li>(New) responsive web design - FreeCodeCamp</li>
+                    <li>Legacy responsive web design - FreeCodeCamp</li>
+                    <li>Scientific computing with Python - FreeCodeCamp</li>
+                    <li>Programming with Python - Tehran institute of technology</li>
+                    <li>SEO foundations - Linkedin</li>
+                    <li>Illustrator 2021 essential training - Linkedin</li>
+                </ul>
+            </div>
+        </section>
+
+        <!--skills section-->
+        <section id="skill" >
+            <h2><label for="radio-skill">Skills</label></h2>
+            <div class="des">
+                <ul>
+                    <li itemprop="knowsAbout">HTML5</li>
+                    <li itemprop="knowsAbout">CSS</li>
+                    <li itemprop="knowsAbout">Bootstrap</li>
+                    <li itemprop="knowsAbout">Python</li>
+                    <li itemprop="knowsAbout">Wordpress</li>
+                    <li itemprop="knowsAbout">SEO</li>
+                    <li itemprop="knowsAbout">Illustrator</li>
+                    <li itemprop="knowsAbout">Figma</li>
+                </ul>
+            </div>
+        </section>
+        </div>
+        </main>
+
+        <!--footer-->
+        <footer>
+        <!--contact information-->
+        <address>
+            <span><a itemprop="email" href="mailto:Nooosha.panahi@gmail.com"><i class="fa fa-envelope"></i></a></span>
+            <span><a itemprop="url" href="http://www.apollomarketer.com"><i class="fa fa-globe"></i></a></span>
+            <span><a href="https://www.linkedin.com/in/noosha-panahi/"><i class="fa fa-linkedin-square"></i></a></span>
+            <span><a itemprop="telephone" href="tel:+989057017944"><i class="fa fa-phone"></i></a></span>
+        </address>
+        </footer>
+    </body>
+</html>
